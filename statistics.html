@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="nav.js">
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            COVID-19
+        </div>
+        <ul class="navbar_link" id="link">
+            <li><a href="infomation.html">코로나 정보</a></li>
+            <li><a href="mutation.html">코로나 변이</a></li>
+            <li><a href="vaccine.html">백신</a></li>
+            <li><a href="statistics.html">나라별 현황</a></li>
+        </ul>
+        <button class="navbar_button" onclick="openCloseToc()">click</button>
+    </nav>
+    <h3>나라별 현황</h3>
+    <div style="float:left;width:50%;height: 400px;;background-image:url(img/korea.png);background-size: cover;" onclick="result(korea)">
+        한국
+    </div>
+    <div style="clear:right;float:right;width:50%;height: 400px;;background-image:url(img/japan.png);background-size: cover;" onclick="result(japan)">
+        일본
+    </div>
+    <div style="float:left;width:50%;height: 400px;;background-image:url(img/america.png);background-size: cover;" onclick="result(america)">
+        미국
+    </div>
+    <div style="clear:right;float:right;width:50%;height: 400px;;background-image:url(img/china.png);background-size: cover;" onclick="result(china)">
+        중국
+    </div>
+    <div style="text-align: center;" id="information">
+        확진자 수 : <div id="confirm">??</div>
+        <br>
+        사망자 수 : <div id="death">??</div>
+    </div>
+    <script type=text/javascript>
+        function result(country) {
+            if(country==korea){
+                document.getElementById("confirm").textContent="517,217명";
+                document.getElementById("death").textContent="54253명";
+            }
+            else if(country==japan){
+                document.getElementById("confirm").textContent="1,729,188명";
+                document.getElementById("death").textContent="18,385명";
+            }
+            else if(country==china){
+                document.getElementById("confirm").textContent="99,604명";
+                document.getElementById("death").textContent="4,636명";
+            }
+            else if(country==america){
+                document.getElementById("confirm").textContent="50,762,671명";
+                document.getElementById("death").textContent="817,7898명";
+            }
+        }
+
+    </script>
+</body>
+</html>
